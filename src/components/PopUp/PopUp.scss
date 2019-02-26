@@ -1,0 +1,23 @@
+.popup-container {
+  transition: opacity 500ms;
+  width: 100%;
+  position: fixed;
+  background-color: hsla(0, 2%, 6%, 0.6);
+  height: 100%;
+  .popup {
+    border: 1px solid #e5e5e5;
+    width: 540px;
+    height: 400px;
+    background-color: #f9f9f9;
+    margin: 0 auto;
+    margin-top: 200px;
+    transition: 5s ease-in-out;
+    .text-win {
+      text-align: center;
+      font-size: 30px;
+      margin-top: 100px;
+      font-weight: bolder;
+      transition: 5s ease-in-out;
+    }
+  }
+}

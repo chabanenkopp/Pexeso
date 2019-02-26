@@ -1,0 +1,29 @@
+.square-container {
+  display: flex;
+}
+.square-container img {
+  flex: 1;
+  max-height: 80px;
+  max-width: 80px;
+  margin-left: 23px;
+  border-radius: 50%;
+  border: solid 2px #ed7a87;
+}
+.square-container div {
+  flex: 1;
+  max-height: 80px;
+  max-width: 80px;
+  min-height: 80px;
+  min-width: 80px;
+  border-radius: 50%;
+  margin-left: 23px;
+  border: solid 2px #ed7a87;
+  background-color: #f8bcc3;
+  transition: 0.5s;
+}
+
+.square-container div:hover {
+  background-color: #ed7a87;
+  transition: 0.5s;
+  cursor: pointer;
+}
