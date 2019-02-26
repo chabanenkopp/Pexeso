@@ -1,4 +1,4 @@
-Pexeso Game
+## PEXESO game
 
 ## Available Scripts
 
