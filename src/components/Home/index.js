@@ -18,7 +18,7 @@ import {
   popUpText
 } from "../../constants/titles.js"
 
-const imageJSON = require("../../data/ImageLinks.json")
+const imageJSON = require("../../data/imageLinks.json")
 
 const rowDataBeforeSplit = shuffle(makePairs(imageJSON))
 const rowData = splitArray(rowDataBeforeSplit)
