@@ -1,18 +1,24 @@
 import React from "react"
 import "./TableBody.scss"
-import TableRow from "../TableRow"
+import Square from "../Square"
 
-export default class TableBody extends React.Component {
-  render() {
-    return (
-      <div className="table-holder">
-        <TableRow
-          rowData={this.props.rowData}
-          showImage={this.props.showImage}
-          getStatesFromRow={this.props.getStatesFromRow}
-          countClicks={this.props.countClicks}
-        />
+const TableBody = ({ rowData, showImage, getStatesFromRow, countClicks }) => {
+  return (
+    <div className="table-holder">
+      <div className="tr-container">
+        {rowData.map((arrWithFiveObj, i) => (
+          <div className="tr-body" key={i}>
+            <Square
+              arrLinks={arrWithFiveObj}
+              showImage={showImage}
+              arrStatesFromRow={getStatesFromRow(arrWithFiveObj)}
+              countClicks={countClicks}
+            />
+          </div>
+        ))}
       </div>
-    )
-  }
+    </div>
+  )
 }
+
+export default TableBody
