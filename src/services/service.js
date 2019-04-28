@@ -1,4 +1,4 @@
-export default class GetFromServer {
+class GetFromServer {
     _apiBase = 'http://localhost:8080';
 
     getData = async url => {
@@ -13,30 +13,23 @@ export default class GetFromServer {
 }
 
 class PostToServer {
-    async sendData(data) {
-        const rawResponse = await fetch("http://localhost:8080/results", {
+    _apiBase = 'http://localhost:8080';
+
+    sendData = async (url, data) => {
+        const res = await fetch(`${this._apiBase}${url}`, {
             method: "POST",
-            mode: "no-cors",
             headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json;charset=UTF-8",
-                "Access-Control-Allow-Origin": "*"
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
         });
-        return rawResponse.json()
-    }
+        return await res.json()
+    };
 
-    async postAndGetResp(data) {
-        this.sendData(data)
-    }
+    postComment = async (data) => await this.sendData('/comment', data);
+    postScore = async (data) => await this.sendData('/scores', data);
+    postRating = async (data) => await this.sendData('/rating', data);
 }
 
 export {GetFromServer, PostToServer}
-
-const getFrom = new GetFromServer();
-
-getFrom.getComments().then(comments => console.log(comments));
-getFrom.getScores().then(scores => console.log(scores));
-getFrom.getAverageRating().then(rating => console.log(rating));
-getFrom.getPlayerRating('testPlayer2').then(rating => console.log(rating));

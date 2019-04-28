@@ -2,7 +2,7 @@ import React from 'react'
 import {GetFromServer} from '../../services/service'
 
 const getComment = obj => [obj.comment, obj.commentedon];
-const getScore = obj => [obj.score, obj.playedon];
+const getScore = obj => [obj.points, obj.playedon];
 
 
 const withList = (Wrapped, type) => ({props}) => {
@@ -15,3 +15,4 @@ const withList = (Wrapped, type) => ({props}) => {
 };
 
 export default withList
+

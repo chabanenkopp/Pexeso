@@ -80,11 +80,11 @@ export default class Home extends Component {
             <div className="content">
                 <Router>
                     <div className="grid-container">
-                        {countPairs(keysBeforeSplit, this.state) === 10 && (
+                        {countPairs(keysBeforeSplit, this.state) === 1 && (
                             <PopUp
                                 popUpText={popUpText}
                                 buttonText={submitButtonText}
-                                score={counter}
+                                points={counter}
                             />
                         )}
                         <div className="top"
@@ -100,7 +100,7 @@ export default class Home extends Component {
                             />
 
                         </div>
-                        <div className="flex">
+                        <div className="flex" style={{minHeight: '76vh'}}>
                             <div className="left">
                                 <Route path="/" exact render={() => (
                                     <Counters
