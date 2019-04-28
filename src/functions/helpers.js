@@ -50,4 +50,19 @@ const splitArray = arrayToSplit => {
   return rowData
 }
 
-export { countTrueValues, prepareState, makePairs, shuffle, splitArray }
+const makeKeysBeforeSplit = rowDataBeforeSplit => {
+  const keysBeforeSplit = []
+  for (let i = 0; i < rowDataBeforeSplit.length; i++) {
+    keysBeforeSplit.push(Object.keys(rowDataBeforeSplit[i])[0])
+  }
+  return keysBeforeSplit
+}
+
+export {
+  makeKeysBeforeSplit,
+  countTrueValues,
+  prepareState,
+  makePairs,
+  shuffle,
+  splitArray
+}

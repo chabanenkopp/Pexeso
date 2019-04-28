@@ -1,6 +1,6 @@
 const countedTriesText = "Your tries:"
 const guessedPairsText = "Guessed pairs:"
-const submitButtonText = "Submit results"
+const submitButtonText = "Submit"
 const gameTitle = "Pexeso"
 const popUpText = "Congratulations!"
 

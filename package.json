@@ -4,10 +4,15 @@
   "private": true,
   "dependencies": {
     "@githubprimer/octicons-react": "^8.4.1",
+    "ajax-request": "^1.2.3",
+    "axios": "^0.18.0",
+    "jsonp": "^0.2.1",
+    "node-rest-client": "^3.1.0",
     "node-sass": "^4.11.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-favicon": "0.0.14",
+    "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.5",
     "react-transition-group": "^2.5.3"
   },

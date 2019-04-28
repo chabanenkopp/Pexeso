@@ -13,7 +13,7 @@ const Square = ({ arrLinks, showImage, arrStatesFromRow, countClicks }) => {
             }}
           />
         ) : (
-          <img src={Object.values(obj)[0]} alt="element to guess" key={i} />
+          <img alt="pic" src={Object.values(obj)[0]} key={i} />
         )
       )}
     </div>

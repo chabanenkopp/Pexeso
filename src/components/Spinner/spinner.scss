@@ -1,0 +1,75 @@
+@keyframes lds-double-ring {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes lds-double-ring {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes lds-double-ring_reverse {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+@-webkit-keyframes lds-double-ring_reverse {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+.lds-double-ring {
+  position: relative;
+}
+.lds-double-ring div {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  top: 20px;
+  left: 20px;
+  border-radius: 50%;
+  border: 8px solid #000;
+  border-color: #020621 transparent #020621 transparent;
+  -webkit-animation: lds-double-ring 2s linear infinite;
+  animation: lds-double-ring 2s linear infinite;
+}
+.lds-double-ring div:nth-child(2) {
+  width: 140px;
+  height: 140px;
+  top: 30px;
+  left: 30px;
+  border-color: transparent rgb(222, 80, 134) transparent rgb(222, 80, 134);
+  -webkit-animation: lds-double-ring_reverse 2s linear infinite;
+  animation: lds-double-ring_reverse 2s linear infinite;
+}
+.lds-double-ring {
+  width: 77px !important;
+  height: 77px !important;
+  -webkit-transform: translate(-38.5px, -38.5px) scale(0.385)
+  translate(38.5px, 38.5px);
+  transform: translate(-38.5px, -38.5px) scale(0.385) translate(38.5px, 38.5px);
+}
+
+.lds-css.ng-scope {
+  margin: 0 auto;
+}
